@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
 
 // Common Resource Routes:
 
@@ -27,3 +24,11 @@ Route::get('/', function () {
 // edit - Show form to edit a listing
 // update - Update listing
 // destroy - Delete listing
+
+
+// Routes for HomeController
+
+// Show Homepage
+Route::get('/', [HomeController::class, 'home']);
+
+
