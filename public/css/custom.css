@@ -1,0 +1,26 @@
+html, body{
+
+}
+
+nav{
+    background: #e4003b;
+}
+
+footer{
+    color: #ffffff;
+    background: #494949;
+    padding: 2rem 0;
+}
+
+footer ul{
+    margin-top: 3rem;
+    display: inline-block;
+    list-style-type: none;
+    list-style:none;
+    float: right;
+}
+
+footer ul>li{
+    margin-right: 1rem;
+    float: left;
+}

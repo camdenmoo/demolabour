@@ -11,12 +11,13 @@
    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom.css?t='.time()) }}" rel="stylesheet">
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     {{-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +49,32 @@
         </div>
     </nav>
 
-    @yield('content')
+    <main>
+        <div class="wrapper">
+            @yield('content')
+            <div class="push"></div>
+        </div>
+    </main>
+
+
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h2>Logo image</h2>
+                    <p>Copyright &copy; 2022 Labour | All rights reserved.<br>105 Victoria Street, London SW1E 6QT</p>
+                </div>
+                <div class="col-6">
+                    <ul >
+                        <li>Join</li>
+                        <li>Donate</li>
+                        <li>Volunteer</li>
+                        <li>Privacy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
