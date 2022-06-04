@@ -4,12 +4,23 @@ html, body{
 
 nav{
     background: #e4003b;
+    height: 78px;
+
+}
+
+.navbar-brand>img{
+    width: 150px;
 }
 
 footer{
     color: #ffffff;
     background: #494949;
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
+}
+
+.footer-logo{
+    width: 150px;
+    margin-bottom: 1.2rem;
 }
 
 footer ul{

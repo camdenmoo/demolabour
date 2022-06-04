@@ -18,13 +18,15 @@
 
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{asset('images/labour-party-white.png')}}" />
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -61,8 +63,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <h2>Logo image</h2>
-                    <p>Copyright &copy; 2022 Labour | All rights reserved.<br>105 Victoria Street, London SW1E 6QT</p>
+                    <a href="/">
+                        <img class="footer-logo" src="{{asset('images/labour-party-white.png')}}" />
+                    </a>
+                    <p><small>Copyright &copy; 2022 Labour | All rights reserved.<br>105 Victoria Street, London SW1E 6QT</small></p>
                 </div>
                 <div class="col-6">
                     <ul >
