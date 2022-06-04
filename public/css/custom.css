@@ -2,6 +2,8 @@ html, body{
 
 }
 
+
+
 nav{
     background: #e4003b;
     height: 78px;
@@ -11,6 +13,35 @@ nav{
 .navbar-brand>img{
     width: 150px;
 }
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e1e1e1;
+    font-weight: bold !important;
+    transition: top ease 0.2s;
+    position: relative;
+    top: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    top: -2px;
+    color: #ffffff;
+}
+
+button.create-event{
+    transition: top ease 0.2s;
+    position: relative;
+    top: 0;
+}
+
+button.create-event:hover{
+    top: -2px;
+}
+
+
+section.content-section{
+    padding: 3rem 0;
+}
+
 
 footer{
     color: #ffffff;
@@ -34,4 +65,20 @@ footer ul{
 footer ul>li{
     margin-right: 1rem;
     float: left;
+    padding: 1rem 0 ;
+    transition: top ease 0.2s;
+    position: relative;
+    top: 0;
 }
+
+footer ul>li:hover{
+    top: -2px;
+}
+
+
+footer ul>li>a.footer-link{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+

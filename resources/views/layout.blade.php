@@ -27,26 +27,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown link
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="https://donation.labour.org.uk/page/75697/donate/1" target="_blank">
+                            <i class="fas fa-donate"></i> Donate
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="https://join.labour.org.uk/" target="_blank"><i class="fa-solid fa-users"></i> Join</a>
+                    </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="https://labour.org.uk/volunteering/" target="_blank"><i class="fa-solid fa-handshake-angle"></i> Volunteer</a>
                     </li>
                 </ul>
+
+                <button class="btn btn-outline-light btn-sm ms-5 create-event">Create Event</button>
             </div>
         </div>
     </nav>
@@ -69,12 +63,30 @@
                     <p><small>Copyright &copy; 2022 Labour | All rights reserved.<br>105 Victoria Street, London SW1E 6QT</small></p>
                 </div>
                 <div class="col-6">
-                    <ul >
-                        <li>Join</li>
-                        <li>Donate</li>
-                        <li>Volunteer</li>
-                        <li>Privacy</li>
-                    </ul>
+                    <small>
+                        <ul>
+                            <li>
+                                <a class="footer-link" href="https://join.labour.org.uk/" target="_blank">
+                                    Join
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://donation.labour.org.uk/page/75697/donate/1" target="_blank">
+                                    Donate
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://labour.org.uk/volunteering/" target="_blank">
+                                    Volunteer
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer-link" href="https://labour.org.uk/cookie-policy/Privacy" target="_blank">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </
                 </div>
             </div>
         </div>

@@ -4,8 +4,10 @@
     
     @include('partials._hero')
 
-    <div class="container">
-        <h1>Hello World!</h1>
-    </div>
+    <section id="homepage" class="content-section">
+        <div class="container">
+            <h1>Hello World!</h1>
+        </div>
+    </section>
 
 @endsection
