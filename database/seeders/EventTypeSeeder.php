@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\EventType;
 use Illuminate\Support\Str;
-use App\Models\EventCategory;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -16,7 +16,7 @@ class EventTypeSeeder extends Seeder
      */
     public function run()
     {
-        EventCategory::insert([
+        EventType::insert([
             [
                 // Canvassing
                 'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 1, 'name' => 'Canvassing', 'slug' => 'canvassing', 'image' => NULL,
