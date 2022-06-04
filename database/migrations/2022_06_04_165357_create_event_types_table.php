@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('event_categories', function (Blueprint $table) {
+        Schema::create('event_types', function (Blueprint $table) {
             $table->id();
             $table->string('hex', 11)->unique();
             $table->integer('user_id')->nullable();
+            $table->integer('event_category_id');
             $table->string('name');
             $table->string('slug');
             $table->string('image')->nullable();
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('event_categories');
+        Schema::dropIfExists('event_types');
     }
 };
