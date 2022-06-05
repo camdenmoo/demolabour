@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('hex', 11);
             $table->foreignId('country_id')->contrained();
-            $table->string('name');
-            $table->string('slug');
-            $table->string('image');
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
+            $table->string('image')->nullable();
             $table->timestamps();
-            $table->boolean('active');
+            $table->boolean('active')->nullable();
         });
     }
 

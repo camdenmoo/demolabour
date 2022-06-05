@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('hex', 11);
             $table->foreignId('country_id')->contrained();
-            $table->foreignId('region_id')->contrained();
-            $table->foreignId('county_id')->contrained();
+            $table->foreignId('region_id')->nullable()->contrained();
+            $table->foreignId('county_id')->nullable()->contrained();
             $table->string('name');
             $table->string('slug');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
-            $table->boolean('active');
+            $table->boolean('active')->nullable();
         });
     }
 

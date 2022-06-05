@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 return new class extends Migration
 {
@@ -17,12 +18,12 @@ return new class extends Migration
             $table->id();
             $table->string('hex', 11);
             $table->foreignId('country_id')->contrained();
-            $table->foreignId('region_id')->contrained();
-            $table->string('name');
-            $table->string('slug');
-            $table->string('image');
+            $table->foreignId('region_id')->nullable()->contrained();
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
+            $table->string('image')->nullable();
             $table->timestamps();
-            $table->boolean('active');
+            $table->boolean('active')->nullable();
         });
     }
 
