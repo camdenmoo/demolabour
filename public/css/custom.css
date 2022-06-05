@@ -22,6 +22,15 @@ p{
     margin-bottom: 0.4rem;
 }
 
+a:link, a:visited{
+    color: #e4003b;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
 @media (min-width: 1200px) {
     .container{
         max-width: 1080px;
@@ -48,13 +57,13 @@ p{
     color: #ffffff;
 }
 
-.navbar button.create-event{
+.navbar button.create-event, .navbar button.login{
     transition: top ease 0.2s;
     position: relative;
     top: 0;
 }
 
-.navbar button.create-event:hover{
+.navbar button.create-event:hover, .navbar button.login:hover{
     top: -2px;
 }
 
@@ -77,7 +86,7 @@ header.content-header h1{
 /* Section Styles */
 
 section.content-section{
-    padding: 3rem 0;
+    padding-bottom: 6rem;
 }
 
 
@@ -232,4 +241,56 @@ footer ul>li>a.footer-link{
 
 footer ul>li>a.footer-link:hover{
     color: #e4003b;
+}
+
+
+
+
+/* Flash Message */
+
+.flash-message{
+    position: fixed;
+    top: calc(50% - 80px);
+    left:calc(50% - 205px);
+    width: 410px;
+    height: 160px;
+    margin: 0 auto;
+    background: #ffffff;
+    color: #494949;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* Form Styles */
+
+label{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+form .form-error-alert{
+    font-size: 0.7rem;
+    color: #e4003b;
+    margin-top: 0.4rem;
+}
+
+
+
+
+
+
+/* Card Styles */
+
+.form-card{
+    min-width: 456px;
+    display: inline-block;
+    background: #fefefe;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 0.2rem;
 }

@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,15 +29,48 @@ use App\Http\Controllers\EventController;
 // destroy - Delete listing
 
 
+
 // Routes for HomeController
 
 // Show Homepage
 Route::get('/', [HomeController::class, 'home']);
 
 
+
 // Routes for EventController
 
 // Show All Events
 Route::get('/events', [EventController::class, 'show']);
+
+// Show Form for Creating a New Event
+Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
+
+
+
+// Routes for UserController
+
+// Show Login Form
+Route::get('/login', [UserController::class, 'login'])->name('login');
+
+// Log user In
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+// Log User Out
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+// Show Registration Form
+Route::get('/register', [UserController::class, 'register']);
+
+// Store New Registered User
+Route::post('/users', [UserController::class, 'store']);
+
+
+
+// Routes for DashboardController
+
+// Show Login Form
+Route::get('/dashboard', [DashboardController::class, 'index']);
+
+
 
 

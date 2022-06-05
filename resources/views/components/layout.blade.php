@@ -40,7 +40,21 @@
                     </li>
                 </ul>
 
-                <button class="btn btn-outline-light btn-sm ms-5 create-event">Create Event</button>
+                <a href="/events/create">
+                    <button class="btn btn-outline-light btn-sm ms-5 create-event">Create Event</button>
+                </a>
+
+                @auth
+                    <form class="inline" method="POST" action="/logout">
+                        @csrf
+                        <button class="btn btn-dark btn-sm ms-3 login" type="submit">Log out</button>
+                    </form>
+                @else
+                    <a href="/login">
+                        <button class="btn btn-outline-light btn-sm ms-3 login">Login</button>
+                    </a>
+                @endauth
+                   
             </div>
         </div>
     </nav>
@@ -88,6 +102,8 @@
             </div>
         </div>
     </footer>
-    
+
+    <x-flash-message/>
+
 </body>
 </html>
