@@ -24,13 +24,15 @@ return new class extends Migration
             $table->string('caption')->nullable();
             $table->string('image')->nullable();
             $table->text('description')->nullable();
+            $table->foreignId('country_id')->nullable();
             $table->foreignId('region_id')->nullable();
+            $table->foreignId('county_id')->nullable();
             $table->foreignId('constituancy_id')->nullable();
             $table->string('venue')->nullable();
+            $table->string('location')->nullable();
             $table->string('address_line_one')->nullable();
             $table->string('address_line_two')->nullable();
             $table->string('city_town')->nullable();
-            $table->foreignId('county_id')->nullable();
             $table->string('postcode')->nullable();
             $table->timestamp('start_date')->nullable();
             $table->timestamp('end_date')->nullable();
