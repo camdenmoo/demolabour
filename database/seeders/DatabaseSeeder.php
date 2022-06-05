@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             ConstituencySeeder::class,
             UserTypeSeeder::class,
+            UserSeeder::class,
 
         ]);
     }
