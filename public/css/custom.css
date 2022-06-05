@@ -1,18 +1,41 @@
+/* Import Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+
+
+/* Global HTML Styles */
+
 html, body{
     height:100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 nav{
     background: #e4003b;
     height: 78px;
-
 }
 
-.navbar-brand>img{
+p{
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1080px;
+    }
+}
+
+
+/* Top Navbar Styles */
+
+.navbar .navbar-brand>img{
     width: 150px;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar .navbar-dark .navbar-nav .nav-link {
     color: #e1e1e1;
     font-weight: bold !important;
     transition: top ease 0.2s;
@@ -20,32 +43,155 @@ nav{
     top: 0;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover{
+.navbar .navbar-dark .navbar-nav .nav-link:hover{
     top: -2px;
     color: #ffffff;
 }
 
-button.create-event{
+.navbar button.create-event{
     transition: top ease 0.2s;
     position: relative;
     top: 0;
 }
 
-button.create-event:hover{
+.navbar button.create-event:hover{
     top: -2px;
 }
 
 
 
 
+/* Header Styles */
+
+header.content-header{
+    padding: 3rem 0;
+}
+
+header.content-header h1{
+    margin-bottom: 2rem;
+}
 
 
 
+
+/* Section Styles */
 
 section.content-section{
     padding: 3rem 0;
 }
 
+
+
+
+/* Main Styles */
+
+
+
+
+/* Article Styles */
+
+article.event-card{
+    background: #fcfbfb;
+    box-shadow: 0px 0px 10px #d1d1d1;
+    padding:1.2rem;
+}
+
+article.event-card .map-box{
+    background: none;
+}
+
+article.event-card .map-box>iframe{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 10px #d1d1d1;
+}
+
+article.event-card div.event-indexes{
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700 !important;
+    letter-spacing: 0.05rem;
+    color: #ffffff;
+}
+
+article.event-card div.event-category{
+    background: red;
+    float: left;
+    margin-right: 0.5rem !important;
+}
+
+article.event-card div.event-type{
+    background: green;
+    float: left;
+}
+
+article.event-card div.distance{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+article.event-card div.countdown{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+article.event-card h3.event-title{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+article.event-card .description{
+    margin-bottom: 1rem;
+}
+
+article.event-card ul{
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    list-style-type: none;
+}
+
+article.event-card ul>li{
+    margin-bottom: 0.5rem;
+}
+
+article.event-card ul>li.event-link{
+    color: inherit;
+}
+
+article.event-card ul>li.event-link:hover{
+    color: #e4003b;
+}
+
+article.event-card ul>li a{
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+article.event-card ul>li i{
+    margin-right: 0.5rem;
+}
+
+article.event-card .action-buttons button{
+    margin-right:0.5rem;
+}
+
+
+
+
+/* Section Styles */
+
+
+
+
+/* Aside Styles */
+
+
+
+
+/* Footer Styles */
 
 footer{
     color: #ffffff;
@@ -53,7 +199,7 @@ footer{
     padding: 3rem 0 2rem;
 }
 
-.footer-logo{
+footer .footer-logo{
     width: 150px;
     margin-bottom: 1.2rem;
 }
@@ -78,7 +224,6 @@ footer ul>li{
 footer ul>li:hover{
     top: -2px;
 }
-
 
 footer ul>li>a.footer-link{
     color: #ffffff;

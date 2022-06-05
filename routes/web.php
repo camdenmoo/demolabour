@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,5 +31,11 @@ use App\Http\Controllers\HomeController;
 
 // Show Homepage
 Route::get('/', [HomeController::class, 'home']);
+
+
+// Routes for EventController
+
+// Show All Events
+Route::get('/events', [EventController::class, 'show']);
 
 

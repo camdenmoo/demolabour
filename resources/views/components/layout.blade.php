@@ -46,10 +46,7 @@
     </nav>
 
     <main>
-        <div class="wrapper">
-            @yield('content')
-            <div class="push"></div>
-        </div>
+        {{$slot}}
     </main>
 
 
