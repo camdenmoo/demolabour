@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -22,6 +23,9 @@ class UserSeeder extends Seeder
             'last_name' => 'Jones',
             'gender' => 'male',
             'email' => 'frankjones.web@gmail.com',
+            'email_verified_at' => now(),
+            'password' => '$2y$10$phUu4IyRgxjyNp/nEeSHrOFDmQiiAwhayT9qWp62iN0pBVnRHlHx6',
+            'remember_token' => Str::random(10),
             'phone' => '07565840007'
         ]);
 
@@ -31,7 +35,10 @@ class UserSeeder extends Seeder
             'last_name' => 'Soffa',
             'gender' => 'male',
             'email' => 'admin@demolabour.com',
-            'phone' => '07743267509'
+            'email_verified_at' => now(),
+            'password' => '$2y$10$LPGe1EzbDapJ.PfTMSf5VOUhhQNLRd9r0x9SS/foaFIf.lZfcM.ay',
+            'remember_token' => Str::random(10),
+            'phone' => '07712345678'
         ]);
 
 

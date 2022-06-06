@@ -71,7 +71,7 @@ class UserController extends Controller
         // Log user in
         auth()->login($user);
 
-        return redirect('/')->with('message', 'User created and logged in');
+        return redirect('/dashboard')->with('message', 'User created and logged in');
 
     }
 }
