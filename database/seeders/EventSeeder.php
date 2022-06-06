@@ -35,14 +35,15 @@ class EventSeeder extends Seeder
                 'city_town' => 'Holbrooks',
                 'county_id' => NULL,
                 'postcode' => 'CV6 2GT',
-                'start_date' => '2022-06-09 15:00:00',
-                'end_date' => '2022-06-09 17:00:00',
-                'start_time' => NULL,
-                'end_time' => NULL,
+                'start_date' => '2022-06-09 00:00:00',
+                'end_date' => '2022-06-09 00:00:00',
+                'start_time' => '15:00',
+                'end_time' => '17:00',
                 'created_at' => now(),
                 'updated_at' => now(),
                 'active' => 1
             ]
+
         ]);
     }
 }

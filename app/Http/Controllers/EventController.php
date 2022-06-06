@@ -11,8 +11,15 @@ class EventController extends Controller
 {
     // Show all events
     public function show(){
+
+        // {{Carbon::parse($timestamp)->format('l S F, H:i')}}
+
+        $events = Event::latest();
+
+        
+
         return view('events.index', [
-            'events' => Event::latest()
+            'events' => $events
                 ->filter(request(['tag', 'search']))
                 ->paginate(6)
         ]);

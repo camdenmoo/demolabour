@@ -38,6 +38,9 @@
                     <li class="nav-item ms-4">
                         <a class="nav-link" href="https://labour.org.uk/volunteering/" target="_blank"><i class="fa-solid fa-handshake-angle"></i> Volunteer</a>
                     </li>
+                    <li class="nav-item ms-4">
+                        <a class="nav-link" href="/events"><i class="fa-solid fa-calendar-days"></i> Events</a>
+                    </li>
                 </ul>
 
                 <a href="/events/create">

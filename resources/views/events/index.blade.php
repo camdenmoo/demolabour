@@ -12,23 +12,30 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col-6 mb-3">
-                                <div class="event-indexes event-category">Campaigning</div>
-                                <div class="event-indexes event-type">Canvassing</div>
+                                <div class="event-indexes event-category">{{$event->event_category->name}}</div>
+                                <div class="event-indexes event-type">{{$event->event_type->name}}</div>
                             </div>
                             <div class="col-6">
-                                <div class="distance float-end">About 14 miles away</div>
+                                <div class="distance float-end">Show distance here</div>
                             </div>
                             <div class="col-12 mb-2">
-                                <div class="countdown">in 4 days</div>
+                                <div class="countdown">
+                                    @php
+                                    $to = \Carbon\Carbon::createFromFormat('Y-m-d H:s:i', now());
+                                    $from = \Carbon\Carbon::createFromFormat('Y-m-d H:s:i', $event->start_date);
+                                    $diff_in_days = $to->diffInDays($from);
+                                    echo "in ".$diff_in_days." days";
+                                    @endphp
+                                </div>
                             </div>
                             <div class="col-12 description">
-                                <h3 class="event-title">Canvassing in Holbrooks</h3>
+                                <h3 class="event-title">{{$event->event_type->name}} in {{$event->city_town}}</h3>
                                 {!!$event->description!!}
                             </div>
                             <div class="col-7">
                                 <ul>
-                                    <li><i class="fa-solid fa-calendar-days"></i> Thursday 9th June 3:00pm - 5:00pm</li>
-                                    <li><i class="fa-solid fa-map"></i> Junction of Halford Lane/Penny Park Lane, CV6 2GT.</li>
+                                    <li><i class="fa-solid fa-calendar-days"></i> {{\Carbon\Carbon::parse($event->start_date)->format('l d F Y')}}, {{$event->start_time}} - {{$event->end_time}}</li>
+                                    <li><i class="fa-solid fa-map"></i> {{$event->location}}</li>
                                 </ul>
                             </div>
                             <div class="col-5">

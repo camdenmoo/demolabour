@@ -23,4 +23,13 @@ class Event extends Model
             ->orWhere('tags ', 'like', '%'.request('search').'%');
         }
     }
+
+    // Relationals
+    public function event_category(){
+        return $this->belongsTo(EventCategory::class, 'event_category_id');
+    }
+
+    public function event_type(){
+        return $this->belongsTo(EventType::class, 'event_type_id');
+    }
 }
