@@ -48,6 +48,9 @@ Route::get('/events/create', [EventController::class, 'create'])->middleware('au
 // Show event types for this event category
 Route::get('/events/{event_category:name}', [EventController::class, 'event_category']);
 
+// Show events for this event_type in this event_category
+Route::get('/events/{event_category:name}/{event_type:name}', [EventController::class, 'event_type']);
+
 
 
 // Routes for UserController

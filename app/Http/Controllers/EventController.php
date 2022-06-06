@@ -43,4 +43,22 @@ class EventController extends Controller
             'event_types' => $event_types
         ]);
     }
+
+    // Show events for this type in this category
+    public function event_type($category, $type){
+
+
+        $event_category = EventCategory::where('slug', $category)->first();
+        $event_type = EventType::where('slug', $type)->first();
+
+     
+
+        $events = Event::where('event_type_id', $event_type->id)->get();
+
+        return view('events.show-events', [
+            'event_category' => $event_category,
+            'event_type' => $event_type,
+            'events' => $events
+        ]);
+    }
 }
