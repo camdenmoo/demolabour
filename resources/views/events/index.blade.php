@@ -1,5 +1,7 @@
 <x-layout>
-    <x-content-header header_title="Events" />
+    <x-content-header header_title="Events">
+        <h4>Browse the Labour Party events in your area.</h4>
+    </x-content-header>
     <section id="events" class="content-section">
 
         @foreach($events as $event)
@@ -12,8 +14,12 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col-6 mb-3">
-                                <div class="event-indexes event-category" style="background: {{$event->event_category->bg_color}}">{{$event->event_category->name}}</div>
-                                <div class="event-indexes event-type" style="background: {{$event->event_type->bg_color}}">{{$event->event_type->name}}</div>
+                                <a href="/events/{{$event->event_category->slug}}">
+                                    <div class="event-indexes event-category" style="background: {{$event->event_category->bg_color}}">{{$event->event_category->name}}</div>
+                                </a>
+                                <a href="/events/{{$event->event_category->slug}}/{{$event->event_type->slug}}">
+                                    <div class="event-indexes event-type" style="background: {{$event->event_type->bg_color}}">{{$event->event_type->name}}</div>
+                                </a>
                             </div>
                             <div class="col-6">
                                 <div class="distance float-end">Show distance here</div>

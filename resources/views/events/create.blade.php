@@ -1,13 +1,15 @@
 <x-layout>
     
     <x-content-header header_title="Create a new event">
-       <p>Please fill out the form to create a new event for the Labour Party.</p>
+        <h4>Page coming soon.</h4>
     </x-content-header>
     
     <section id="events" class="content-section">
         <div class="container">
+
             
-            <div class="form-card">
+            
+            {{-- <div class="form-card">
 
                 <form method="POST" action="#">
                     @csrf
@@ -107,8 +109,8 @@
                             <button type="submit" class="btn btn-danger">Create & publish event</button>
                         </div>
 
-                </form>
-            </div>
+                </form> --}}
+ 
 
         </div>
     </section>
