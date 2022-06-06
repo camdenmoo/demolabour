@@ -30,6 +30,7 @@ class EventSeeder extends Seeder
                 'region_id' => NULL,
                 'constituancy_id' => NULL,
                 'venue' => NULL,
+                'location' => 'junction of Halford Lane/Penny Park Lane, CV6 2GT',
                 'address_line_one' => NULL,
                 'address_line_two' => NULL,
                 'city_town' => 'Holbrooks',

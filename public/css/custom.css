@@ -31,6 +31,10 @@ a:hover{
     text-decoration: underline;
 }
 
+a.no-underline:hover{
+    text-decoration: none !important;
+}
+
 @media (min-width: 1200px) {
     .container{
         max-width: 1080px;
@@ -293,3 +297,26 @@ form .form-error-alert{
     border: 1px solid #d1d1d1;
     border-radius: 0.2rem;
 }
+
+.badge-card{
+    background:#000000;
+    color: #f1f1f1;
+    padding: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .2s ease-in-out;
+}
+
+.badge-card:hover{
+    transform: scale(1.04);
+}
+
+.badge-card-content{
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

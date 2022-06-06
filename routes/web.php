@@ -45,31 +45,34 @@ Route::get('/events', [EventController::class, 'show']);
 // Show Form for Creating a New Event
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
 
+// Show event types for this event category
+Route::get('/events/{event_category:name}', [EventController::class, 'event_category']);
+
 
 
 // Routes for UserController
 
 // Show Login Form
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->middleware('guest')->name('login');
 
 // Log user In
-Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+Route::post('/users/authenticate', [UserController::class, 'authenticate'])->middleware('guest');
 
 // Log User Out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 // Show Registration Form
-Route::get('/register', [UserController::class, 'register']);
+Route::get('/register', [UserController::class, 'register'])->middleware('guest');
 
 // Store New Registered User
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->middleware('guest');
 
 
 
 // Routes for DashboardController
 
 // Show Login Form
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 
 

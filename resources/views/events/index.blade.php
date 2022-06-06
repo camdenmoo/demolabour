@@ -12,8 +12,8 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col-6 mb-3">
-                                <div class="event-indexes event-category">{{$event->event_category->name}}</div>
-                                <div class="event-indexes event-type">{{$event->event_type->name}}</div>
+                                <div class="event-indexes event-category" style="background: {{$event->event_category->bg_color}}">{{$event->event_category->name}}</div>
+                                <div class="event-indexes event-type" style="background: {{$event->event_type->bg_color}}">{{$event->event_type->name}}</div>
                             </div>
                             <div class="col-6">
                                 <div class="distance float-end">Show distance here</div>

@@ -6,9 +6,9 @@
                 <p class="fs-5 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <a href="/events">
-                        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">View events</button>
+                        <button type="button" class="btn btn-outline-danger btn-lg px-4 me-sm-3 fw-bold">View events</button>
                     </a>
-                    <a href="/">
+                    <a href="/dashboard">
                         <button type="button" class="btn btn-outline-light btn-lg px-4">My account</button>
                     </a>
                 </div>

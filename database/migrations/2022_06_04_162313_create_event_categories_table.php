@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('image')->nullable();
             $table->text('description')->nullable();
+            $table->string('bg_color', 7)->default('#555555');
             $table->timestamps();
             $table->boolean('active')->nullable();
         });

@@ -11,12 +11,8 @@ class EventController extends Controller
 {
     // Show all events
     public function show(){
-
-        // {{Carbon::parse($timestamp)->format('l S F, H:i')}}
-
-        $events = Event::latest();
-
         
+        $events = Event::latest();
 
         return view('events.index', [
             'events' => $events
@@ -33,6 +29,17 @@ class EventController extends Controller
 
         return view('events.create', [
             'event_categories' => $event_categories,
+            'event_types' => $event_types
+        ]);
+    }
+
+    // Show event types for this category
+    public function event_category(EventCategory $event_category){
+
+        $event_types = EventType::where('event_category_id', $event_category->id)->get();
+
+        return view('events.show-event-types', [
+            'event_category' => $event_category,
             'event_types' => $event_types
         ]);
     }
