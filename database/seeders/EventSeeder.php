@@ -26,13 +26,7 @@ class EventSeeder extends Seeder
                 'contact_id' => NULL,
                 'caption' => NULL,
                 'image' => NULL,
-                'description' => 'Join Taiwo Owatemi MP and the Coventry North West Labour team to speak to voters in Holbrooks Ward!
-
-                We\'ll be canvassing local residents to find out about any issues in the local area and to speak to them about any concerns they may have.
-
-                Don\'t worry if you haven\'t done doorknocking for Labour before, we will have experienced campaigners who can provide training.
-
-                Meet 3pm at the junction of Halford Lane/Penny Park Lane, CV6 2GT.',
+                'description' => '<p>Join Taiwo Owatemi MP and the Coventry North West Labour team to speak to voters in Holbrooks Ward!</p><p>We\'ll be canvassing local residents to find out about any issues in the local area and to speak to them about any concerns they may have.</p><p>Don\'t worry if you haven\'t done doorknocking for Labour before, we will have experienced campaigners who can provide training.</p><p>Meet 3pm at the junction of Halford Lane/Penny Park Lane, CV6 2GT.</p>',
                 'region_id' => NULL,
                 'constituancy_id' => NULL,
                 'venue' => NULL,

@@ -60,6 +60,7 @@
     </nav>
 
     <main>
+        <x-flash-message/>        
         {{$slot}}
     </main>
 
@@ -103,7 +104,7 @@
         </div>
     </footer>
 
-    <x-flash-message/>
+    
 
 </body>
 </html>

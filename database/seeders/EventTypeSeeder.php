@@ -63,13 +63,21 @@ class EventTypeSeeder extends Seeder
                 'description' => NULL, 'created_at' => now(), 'updated_at' => now(), 'active' => 1
             ],
             [
+                // Training (online)
+                'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 3, 'name' => 'Training (online)', 'slug' => 'training-online', 'image' => NULL, 'description' => NULL, 'created_at' => now(), 'updated_at' => now(), 'active' => 1
+            ],
+            [
+                // Training (in person)
+                'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 3, 'name' => 'Training (inperson)', 'slug' => 'training-in-person', 'image' => NULL, 'description' => NULL, 'created_at' => now(), 'updated_at' => now(), 'active' => 1
+            ],
+            [
                 // Conference
-                'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 3, 'name' => 'Conference', 'slug' => 'conference', 'image' => NULL,
+                'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 4, 'name' => 'Conference', 'slug' => 'conference', 'image' => NULL,
                 'description' => NULL, 'created_at' => now(), 'updated_at' => now(), 'active' => 1
             ],
             [
                 // Surgery
-                'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 4, 'name' => 'Surgery', 'slug' => 'surgery', 'image' => NULL,
+                'hex' => Str::random(11), 'user_id' => NULL, 'event_category_id' => 5, 'name' => 'Surgery', 'slug' => 'surgery', 'image' => NULL,
                 'description' => NULL, 'created_at' => now(), 'updated_at' => now(), 'active' => 1
             ]
         ]);

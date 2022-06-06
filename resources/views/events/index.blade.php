@@ -1,19 +1,13 @@
 <x-layout>
-
-    <header class="content-header">
-        <div class="container">
-            <h1>Events</h1>
-        </div>
-    </header>
-
+    <x-content-header header_title="Events" />
     <section id="events" class="content-section">
-        <div class="container">
 
-            <article class="event-card">
+        @foreach($events as $event)
+            <x-event-card :events="$events">
                 <div class="row">
                     <div class="col-4 map-box">
                         <iframe loading="lazy" allowfullscreen
-                        src="https://www.google.com/maps/embed/v1/place?q=Halford%20Lane%2FPenny%20Park%20Lane%2C%20CV6%202GT&key=AIzaSyD0B0b8W6N51vAbwtEVv1TkBFvaqRNQDAs"></iframe>
+                            src="https://www.google.com/maps/embed/v1/place?q=Halford%20Lane%2FPenny%20Park%20Lane%2C%20CV6%202GT&key=AIzaSyD0B0b8W6N51vAbwtEVv1TkBFvaqRNQDAs"></iframe>
                     </div>
                     <div class="col-8">
                         <div class="row">
@@ -29,10 +23,7 @@
                             </div>
                             <div class="col-12 description">
                                 <h3 class="event-title">Canvassing in Holbrooks</h3>
-                                <p>Join Taiwo Owatemi MP and the Coventry North West Labour team to speak to voters in Holbrooks Ward!</p>
-                                <p>We'll be canvassing local residents to find out about any issues in the local area and to speak to them about any concerns they may have.</p>
-                                <p>Don't worry if you haven't done doorknocking for Labour before, we will have experienced campaigners who can provide training.</p>
-                                <p>Meet 3pm at the junction of Halford Lane/Penny Park Lane, CV6 2GT.</p>
+                                {!!$event->description!!}
                             </div>
                             <div class="col-7">
                                 <ul>
@@ -58,18 +49,17 @@
                                         </a>
                                     </li>
                                 </ul>
-                                
+                                    
                             </div>
                             <hr>
                             <div class="col-12 action-buttons">
                                 <button class="btn btn-danger">Contact Host <i class="fa-solid fa-user"></i></button>
-                                <button class="btn btn-outline-danger">RSVP <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-outline-danger">RSVP <i class="fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </article>
-
-        </div>
+            </x-event-card>
+        @endforeach
     </section>
 </x-layout>
