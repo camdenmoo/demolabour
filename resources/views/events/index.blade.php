@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-4 map-box">
                         <iframe loading="lazy" allowfullscreen
-                            src="https://www.google.com/maps/embed/v1/place?q=Halford%20Lane%2FPenny%20Park%20Lane%2C%20CV6%202GT&key=AIzaSyD0B0b8W6N51vAbwtEVv1TkBFvaqRNQDAs"></iframe>
+                            src="https://www.google.com/maps/embed/v1/place?q={{urlencode($event->location)}}&key=AIzaSyD0B0b8W6N51vAbwtEVv1TkBFvaqRNQDAs"></iframe>
                     </div>
                     <div class="col-8">
                         <div class="row">
